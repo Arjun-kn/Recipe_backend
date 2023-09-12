@@ -31,7 +31,7 @@ router.post('/', authenticate,upload.single('file'),async (req,res)=>{
 
         const newRecipe = new Recipe({
             title,
-            ingredients:ingredients.split('\n'),
+            ingredients,
             instruction,
             imageUrl:req.file.filename,
             author ,
